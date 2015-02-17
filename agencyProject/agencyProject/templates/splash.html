@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+
+
+{% block title %}
+<title>Splash Page</title>
+{% endblock title %}
+
+{% block navbar %}
+<li class="active"><a href="#">Splash<span class="sr-only">(current)</span></a></li>
+
+<li><a href="{% url 'agencyProject.views.home' %}">Home</a></li>
+<li><a href="{% url 'agencyProject.views.about' %}">About</a></li>
+<li><a href="{% url 'agencyProject.views.campaigns' %}">Campaigns</a></li>
+<li><a href="{% url 'agencyProject.views.campaigns_pages' %}">Campaigns Pages</a></li>
+{% endblock %}
+
+{% block content %}
+
+<p>Splash Page</p>
+
+
+
+
+{% endblock %}
