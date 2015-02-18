@@ -14,6 +14,7 @@ urlpatterns = patterns('',
     url(r'^campaigns/', views.campaigns, name='campaigns'),
     url(r'^campaigns_pages/',views.campaigns_pages, name='campaigns_pages'),
     url(r'^splash/', views.splash, name='splash'),
+    url(r'^share/', views.share, name='share'),
     url(r'^admin/', include(admin.site.urls)),
 )+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block title %}
+<title>Share</title>
+{% endblock title %}
+
+{% block content %}
+{% load bootstrap3 %}
+<div class="row">
+    <div class="span8">
+        <p>Share page content</p>
+    </div>
+    <div class="span4">
+        <form action="/share/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form  %}
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</div>
+{% endblock %}
