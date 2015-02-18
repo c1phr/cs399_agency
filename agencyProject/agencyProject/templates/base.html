@@ -73,7 +73,12 @@
     </div>
 
     <div class="container">
- {% block content %}
+    {% block heading %}
+        <div class="row">
+            <h1>Hello World Advertising</h1>
+        </div>
+    {% endblock %}
+    {% block content %}
       {% endblock %}
 
       <hr>
