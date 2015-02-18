@@ -1,17 +1,11 @@
 from django.shortcuts import render
-from django import forms
-from django.http import HttpResponseRedirect 
+from django.http import HttpResponseRedirect
+from agencyProject import models
+from agencyProject.forms import agencyForm, share_form
 
-class agencyForm(forms.Form):
-    
-    first_name = forms.CharField(label = "First Name")
-    last_name = forms.CharField(label = "Last Name")
-    email = forms.EmailField(label = "Email")
-    phone_number = forms.IntegerField(label = "Phone Number")
-    
-    
+
 def home(request):
-	return render(request, 'index.html', {})
+    return render(request, 'index.html', {})
     
 def about(request):
     
@@ -19,14 +13,14 @@ def about(request):
         form = agencyForm(request.POST)
             
         if form.is_valid():
-           agency = form()
-           agency.first_name = form.cleaned_data["first name"]
-           agency.last_name = form.cleaned_data["last name"]
+           agency = models.form()
+           agency.first_name = form.cleaned_data["first_name"]
+           agency.last_name = form.cleaned_data["last_name"]
            agency.email = form.cleaned_data["email"]
-           agency.phone_number = form.cleaned_data["phone number"]
+           agency.phone_number = form.cleaned_data["phone_number"]
            agency.save()
            
-           return HttpResponseRedirect('/thanks/')
+           return HttpResponseRedirect('/')
 
     else:
         form = agencyForm()
@@ -36,15 +30,24 @@ def about(request):
 
         #return HttpResponseRedirect("/404/")
     
-	#return render(request, 'about.html', {})
+    #return render(request, 'about.html', {})
 
 def campaigns(request):
-	return render(request, 'campaigns.html', {})
+    return render(request, 'campaigns.html', {})
 
 def campaigns_pages(request):
-	return render(request, 'campaigns_pages.html', {})
+    return render(request, 'campaigns_pages.html', {})
 
 def splash(request):
-	return render(request, 'splash.html', {})
+    return render(request, 'splash.html', {})
 
+def share(request):
+    if request.method == 'POST':
+        form = share_form(request.POST)
 
+        if form.is_valid():
+            share = form()
+            share.first_name = form.cleaned_data["first name"]
+            share.last_name = form.cleaned_data["last name"]
+
+    return render(request, 'share.html', {})
