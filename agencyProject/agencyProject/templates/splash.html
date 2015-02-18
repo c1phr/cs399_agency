@@ -55,7 +55,9 @@
   
   <body>
           <div class="inner cover">
+              {% block heading %}{% endblock %} <!--Fixes the heading showing up twice-->
             <h1 class="cover-heading">Hello World Advertising</h1>
+
             <p class="lead">Hello World Advertising</p>
             <p class="lead">
 	    <p><a href="{% url 'agencyProject.views.about' %}" class="btn btn-primary btn-large">Signup &raquo;</a>
