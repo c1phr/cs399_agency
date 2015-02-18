@@ -9,8 +9,6 @@ class form(models.Model):
     created = models.DateTimeField(auto_now_add = True)
 
 class share_form(models.Model):
-    first_name = models.CharField(max_length=50)
-    last_name = models.CharField(max_length=50)
     sender_email = models.EmailField(max_length=254)
     receiver_email = models.EmailField(max_length=254)
     sender_phone = models.CharField(max_length=20)

@@ -46,9 +46,7 @@ def share(request):
         form = share_form(request.POST)
 
         if form.is_valid():
-            share = models.share_form
-            share.first_name = form.cleaned_data["first name"]
-            share.last_name = form.cleaned_data["last name"]
+            share = models.share_form()
             share.receiver_email = form.cleaned_data["receiver_email"]
             share.sender_email = form.cleaned_data["sender_email"]
             share.receiver_phone = form.cleaned_data["receiver_phone"]
