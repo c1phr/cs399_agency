@@ -20,7 +20,7 @@ def about(request):
            agency.phone_number = form.cleaned_data["phone_number"]
            agency.save()
            
-           return HttpResponseRedirect('/')
+           return HttpResponseRedirect('/thanks')
 
     else:
         form = agencyForm()
@@ -55,7 +55,7 @@ def share(request):
             share.sender_phone = form.cleaned_data["sender_phone"]
             share.save()
 
-            return HttpResponseRedirect('/')
+            return HttpResponseRedirect('/thanks/')
 
     else:
         form = share_form()
@@ -63,3 +63,6 @@ def share(request):
     return render(request, 'share.html', {'form': form})
 
     return render(request, 'share.html', {})
+
+def thanks(request):
+    return render(request, 'thanks.html', {})
