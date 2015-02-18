@@ -1,31 +1,29 @@
 {% extends "base.html" %}
-
-
-
 {% block title %}
 <title>About</title>
 {% endblock title %}
 
-{% block navbar %}
-<li class="active"><a href="#">About<span class="sr-only">(current)</span></a></li>
-
-<li><a href="{% url 'agencyProject.views.home' %}">Home</a></li>
-<li><a href="{% url 'agencyProject.views.campaigns' %}">Campaigns</a></li>
-<li><a href="{% url 'agencyProject.views.campaigns_pages' %}">Campaigns Pages</a></li>
-<li><a href="{% url 'agencyProject.views.splash' %}">Splash</a></li>
-{% endblock %}
-
 {% block content %}
-
-
-About Page
-
 {% load bootstrap3 %}
-
-<form action="/" method="post">
-    {% csrf_token %}
-	{% bootstrap_form form  %}
-    <input type="submit" value="Submit" />
-</form>
-
+<div class="row">
+    <div class="span8">
+        <p>
+            Hello World Advertising started as a small advertising agency in the town of Flagstaff Arizona.
+           Since its inception, Hello World has been driving up sales revenue for businesses all around Northern Arizona.
+            Hello World has since grown to encompass companies all across the globe with wild success.
+        </p>
+        <p>
+            We specialize in web advertising primarily, but we do design work for all sorts of physical advertising mediums
+            such as posters and banners, as well as business cards! Fill out the form to the right to connect with one of
+            our agents and get 200 free business cards for your business or personal portfolio!
+        </p>
+    </div>
+    <div class="span4">
+        <form action="/" method="post">
+            {% csrf_token %}
+            {% bootstrap_form form  %}
+            <input type="submit" value="Submit" />
+        </form>
+    </div>
+</div>
 {% endblock %}
