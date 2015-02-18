@@ -3,10 +3,12 @@ from django.http import HttpResponseRedirect
 from agencyProject import models
 from agencyProject.forms import agencyForm, share_form
 
-
 def home(request):
+    return render(request, 'splash.html', {})
+
+def index(request):
     return render(request, 'index.html', {})
-    
+
 def about(request):
     
     if request.method == 'POST':
@@ -38,8 +40,7 @@ def campaigns(request):
 def campaigns_pages(request):
     return render(request, 'campaigns_pages.html', {})
 
-def splash(request):
-    return render(request, 'splash.html', {})
+
 
 def share(request):
     if request.method == 'POST':

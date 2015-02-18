@@ -7,13 +7,13 @@ from . import views
 
 urlpatterns = patterns('',
     # Examples:
-     url(r'^$', 'agencyProject.views.home', name='home'),
+     url(r'^$', 'agencyProject.views.home', name='splash'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^about/', views.about, name='about'),
     url(r'^campaigns/', views.campaigns, name='campaigns'),
     url(r'^campaigns_pages/',views.campaigns_pages, name='campaigns_pages'),
-    url(r'^splash/', views.splash, name='splash'),
+    url(r'^index/', views.index, name='index'),
     url(r'^share/', views.share, name='share'),
     url(r'^thanks/', views.thanks, name='thanks'),
     url(r'^admin/', include(admin.site.urls)),
