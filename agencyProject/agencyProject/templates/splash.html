@@ -28,7 +28,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Cover Template for Bootstrap</title>
+    <title>Ad Agency</title>
 
     <!-- Bootstrap core CSS -->
     <link href="/static/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -49,17 +49,33 @@
   
   <style>
 	
+	h4 {
+	color: black;
+	text-align: center;
+	}
 	
+	h1 {
+	color: black;
+	text-align: center;
+	}
   </style>
   
   
   <body>
           <div class="inner cover">
               {% block heading %}{% endblock %} <!--Fixes the heading showing up twice-->
-            <h1 class="cover-heading">Hello World Advertising</h1>
-
-            <p class="lead">Hello World Advertising</p>
-            <p class="lead">
+            <h1 class="cover-heading">Hello World Advertising!</h1>
+	       
+		<br/>
+		<br/>
+	    
+	    <h4>Welcome to Hello World Advertising! We can help your brand reach an audience far wider than you ever expected.</h4>
+	    
+		<br/>
+		<br/>
+		
+	    <h4>Signup now to recieve your FREE Business Cards</h4>
+         
 	    <p><a href="{% url 'agencyProject.views.about' %}" class="btn btn-primary btn-large">Signup &raquo;</a>
 		<a href="{% url 'agencyProject.views.index' %}" class="btn btn-primary btn-large">Visit Home &raquo;</a></p>
 
