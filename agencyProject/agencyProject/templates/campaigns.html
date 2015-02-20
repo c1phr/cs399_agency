@@ -12,33 +12,47 @@
 <li><a href="{% url 'agencyProject.views.splash' %}">Splash</a></li>
 {% endblock %}
 
+   
 {% block content %}
-
-<br>
-	<h4>Check out our advertisements that helped two local Flagstaff businesses become the new cool places to go!</h4>
-</p>
-<br>
-<h5>HelloWorld Brewery:</h5>
-<img src="/static/images/brewerylogo.png">
-<br>
-<img src="/static/images/brewery.png">
-<br><br><br>
-<h5>and Legendary Theatre:</h5>
-<img src="/static/images/legendarylogo.png">
-<br>
-<img src="/static/images/legendary.jpg">
-<br><br>
-<p>
-	<h4>We have hundreds of styles to create the perfect business card that fits you just right</h4>
-</p>
-<br>
-<img src="/static/images/cards.jpg">
-<br><br>
-<p>
-	<h4>We are also partnered with SEO firms ensure your business gets the customers it deservers</h4>
-</p>
-<br>
-<img src="/static/images/seo.jpg">
-<br>
-
+<!-- Campaigns -->
+<h3>Campaigns</h3>
+<div class="container">
+  <div class="row">
+    <!-- campaign1 -->
+    <div class="col-md-2">
+      <a  href="/static/images/brewery.png" class="thumbnail">
+        <img src="/static/images/brewery.png" height="600" width="600">
+      </a>          
+      <strong>HelloWorld Brewery</strong>
+      <p>After our advertising campaign HelloWorld brewery became a Flagstaff hotspot for beer lovers.</p>
+    </div>
+    <br>
+    <!-- campaign2 -->
+    <div class="col-md-2">
+      <a href="/static/images/legendary.jpg" class="thumbnail">
+        <img src="/static/images/legendary.jpg" height="600" width="700">
+      </a>
+      <strong>Legendary Theatre</strong>
+      <p>After hiring uss Legendary Theatre has become the premiere comedy club in Flagstaff!</p>
+    </div>
+    <br>
+    <!-- campaign3 -->
+    <div class="col-md-2">
+      <a href="/static/images/cards.jpg" class="thumbnail">
+        <img src="/static/images/cards.jpg" height="600" width="600">
+      </a>
+      <strong>Business Cards</strong>
+      <p>We have hundreds of styles to create the perfect business card that fits you just right</p>
+      </div>
+      <br>
+    <!-- campaign4 -->
+    <div class="col-md-2">
+      <a href="/static/images/seo.jpg" class="thumbnail">
+        <img src="/static/images/seo.jpg" height="600" width="600">
+      </a>
+      <strong>Search Engine Optimization</strong>
+      <p>We are partnered with SEO and Google Adwords firms to ensure your business gets the attention it deserves!</p>
+    </div>
+  </div>
+</div>    
 {% endblock %}
