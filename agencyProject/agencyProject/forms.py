@@ -20,4 +20,4 @@ class ReviewForm (forms.Form):
     name = forms.CharField(label="Your Name: ")
     title = forms.CharField(label="Your job title: ")
     business = forms.CharField(label="Your business: ")
-    review = forms.CharField(label="Your Review of Hello World Advertising Agency: ")
+    review = forms.CharField(label="Your Review of Hello World Advertising Agency: ", widget=forms.Textarea)

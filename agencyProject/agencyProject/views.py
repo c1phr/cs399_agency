@@ -82,9 +82,9 @@ def reviews(request):
             reviews.review = form.cleaned_data["review"]
             reviews.save()
 
-            #return HttpResponseRedirect('/thanks/')
+            return HttpResponseRedirect('/thanks/')
 
-        else:
-            form = ReviewForm()
+    else:
+        form = ReviewForm()
 
-        return render(request, 'reviews.html', {'form': form})
+    return render(request, 'reviews.html', {'form': form})

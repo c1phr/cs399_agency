@@ -22,4 +22,4 @@ class ReviewForm(models.Model):
     name = models.CharField(max_length=50)
     title = models.CharField(max_length=50)
     business = models.CharField(max_length=50)
-    review = models.CharField(max_length=50)
+    review = models.CharField(max_length=2000)

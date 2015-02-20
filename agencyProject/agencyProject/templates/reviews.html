@@ -6,29 +6,17 @@
 {% block content %}
 {% load bootstrap3 %}
 <div class="container">
-	<table class="table">
-		<caption>
 			<div style="text-align: left">
 				<h3>Testimonials</h3>
 				<p>We love our clients, and our clients love us!</p>
 				<p>Please share your experience doing business Hello World Advertising.</p>
 			</div>
-		</caption>
-		<thead>
-			<th>Name</th>
-			<th>Title</th>
-			<th>Business</th>
-		</thead>
-		
-		<tbody>
+<br>
 			<form action="/reviews/" method="post">
 				{% csrf_token %}
 				{% bootstrap_form form  %}
-				<input type="submit" value="Submit" />
+				<input type="submit" class="btn btn-info" value="Submit" />
 			</form>
-		</tbody>
-		
-	</table>
 </div>
 
 {% endblock %}
