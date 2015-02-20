@@ -19,16 +19,24 @@ th, td {
 
 <h3> Companies that used HelloWorld Advertising previously said...</h3>
 <table style="width:100%">
-  <tr>
-    <td>HelloWorld Brewery</td>
-    <td>"HelloWorld Advertising grew our business 35%!  Thank you so much!"</td>
-    <td>2/10/2015</td>		
-  </tr>
-  <tr>
-    <td>Legendary Theatre</td>
-    <td>"With the help of HelloWorld Advertising, we were able to maximize our profits! Five Stars!"</td>
-    <td>2/05/2014</td>		     
-  </tr>
+
+    <thead>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Business</th>
+        <th>Review</th>
+    </thead>
+
+    <tbody>
+        {% for review in reviews %}
+            <tr>
+                <td>{{ review.name }}</td>
+                <td>{{ review.title }}</td>
+                <td>{{ review.business }}</td>
+                <td>{{ review.review }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
 </table>
 
 <br>
@@ -45,5 +53,7 @@ th, td {
 				<input type="submit" class="btn btn-info" value="Submit" />
 			</form>
 </div>
+
+
 
 {% endblock %}
