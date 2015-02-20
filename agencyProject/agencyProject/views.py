@@ -65,3 +65,6 @@ def share(request):
 
 def thanks(request):
     return render(request, 'thanks.html', {})
+	
+def reviews(request):
+	return render(request, 'reviews.html', {})

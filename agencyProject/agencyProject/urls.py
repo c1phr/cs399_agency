@@ -16,7 +16,9 @@ urlpatterns = patterns('',
     url(r'^index/', views.index, name='index'),
     url(r'^share/', views.share, name='share'),
     url(r'^thanks/', views.thanks, name='thanks'),
+	url(r'^reviews/', views.reviews, name='reviews'),
     url(r'^admin/', include(admin.site.urls)),
+
 )+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 
 
