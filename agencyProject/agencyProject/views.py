@@ -87,4 +87,4 @@ def reviews(request):
     else:
         form = ReviewForm()
 
-    return render(request, 'reviews.html', {'form': form})
+    return render(request, 'reviews.html', {'reviews': models.ReviewForm.objects.all(), 'form': form})
